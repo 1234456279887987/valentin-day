@@ -3,26 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>¿Quieres ser mi Valentín?</title>
+  <title>¿Quieres ser mi Valentín? 💖</title>
   <style>
     body {
-      background-color: #ffe6e6;
-      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffe6e6, #ffb3b3);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
       text-align: center;
-      padding-top: 80px;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100vh;
+      position: relative;
     }
     h1 {
       color: #cc0000;
       font-size: 50px;
-      margin-bottom: 40px;
+      margin-top: 50px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
     button {
       padding: 10px 20px;
       font-size: 20px;
-      margin: 10px;
+      margin: 20px;
       cursor: pointer;
       border: none;
-      border-radius: 5px;
+      border-radius: 10px;
       transition: background-color 0.3s;
     }
     #yesButton {
@@ -37,17 +42,36 @@
       color: #c94c4c;
       position: relative;
     }
+    /* Estilos para los corazones decorativos */
+    .heart {
+      position: absolute;
+      font-size: 24px;
+      animation: float 4s infinite;
+      user-select: none;
+    }
+    @keyframes float {
+      0%   { transform: translateY(0) scale(0.8); opacity: 0.8; }
+      50%  { transform: translateY(-20px) scale(1.2); opacity: 1; }
+      100% { transform: translateY(0) scale(0.8); opacity: 0.8; }
+    }
   </style>
 </head>
 <body>
-  <h1>¿Quieres ser mi Valentín?</h1>
-  <button id="yesButton" onclick="alert('¡Sabía que dirías que sí!')">Sí</button>
+  <h1>¿Quieres ser mi Valentín? ❤️</h1>
+  <button id="yesButton" onclick="alert('¡Sabía que dirías que sí! 💕')">Sí 💖</button>
   <button id="noButton">No</button>
+
+  <!-- Corazones decorativos en distintas posiciones -->
+  <span class="heart" style="top: 10%; left: 20%;">❤️</span>
+  <span class="heart" style="top: 30%; left: 80%;">💖</span>
+  <span class="heart" style="top: 50%; left: 50%;">💕</span>
+  <span class="heart" style="top: 70%; left: 15%;">💓</span>
+  <span class="heart" style="top: 80%; left: 70%;">💘</span>
 
   <script>
     const noButton = document.getElementById('noButton');
 
-    // Cada vez que el mouse se acerque al botón de "No", se reposiciona en una ubicación aleatoria
+    // Cuando el mouse se acerca al botón de "No", este se mueve a una posición aleatoria
     noButton.addEventListener('mouseover', function() {
       const maxWidth = window.innerWidth - noButton.offsetWidth;
       const maxHeight = window.innerHeight - noButton.offsetHeight;
@@ -60,3 +84,5 @@
   </script>
 </body>
 </html>
+
+  
