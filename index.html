@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Quieres ser mi Valentín?</title>
+  <style>
+    body {
+      background-color: #ffe6e6;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 80px;
+    }
+    h1 {
+      color: #cc0000;
+      font-size: 50px;
+      margin-bottom: 40px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 20px;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    #yesButton {
+      background-color: #a3d2ca;
+      color: #034f84;
+    }
+    #yesButton:hover {
+      background-color: #79b4a6;
+    }
+    #noButton {
+      background-color: #f7cac9;
+      color: #c94c4c;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <h1>¿Quieres ser mi Valentín?</h1>
+  <button id="yesButton" onclick="alert('¡Sabía que dirías que sí!')">Sí</button>
+  <button id="noButton">No</button>
+
+  <script>
+    const noButton = document.getElementById('noButton');
+
+    // Cada vez que el mouse se acerque al botón de "No", se reposiciona en una ubicación aleatoria
+    noButton.addEventListener('mouseover', function() {
+      const maxWidth = window.innerWidth - noButton.offsetWidth;
+      const maxHeight = window.innerHeight - noButton.offsetHeight;
+      const randomX = Math.floor(Math.random() * maxWidth);
+      const randomY = Math.floor(Math.random() * maxHeight);
+      noButton.style.position = 'absolute';
+      noButton.style.left = randomX + 'px';
+      noButton.style.top = randomY + 'px';
+    });
+  </script>
+</body>
+</html>
